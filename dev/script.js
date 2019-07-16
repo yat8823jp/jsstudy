@@ -1,9 +1,10 @@
-var hello = function( bb ) {
+console.log( "sample" );
+let hello = function( bb ) {
   console.log( bb );
 }
 hello( "ak" );
 
-var obj = new Object();
+let obj = new Object();
 obj.var1 = "hello";
 
 obj.func = function() {
