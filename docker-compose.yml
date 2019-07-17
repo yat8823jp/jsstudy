@@ -1,10 +1,19 @@
 version: '3'
 services:
-  nginx:
-    image: 'nginx'
-    container_name: 'nginx-jsstudy'
-    ports:
-      - '80:80'
-      - '443:443'
+#  nginx:
+#    image: 'nginx'
+#    container_name: 'nginx-jsstudy'
+#    ports:
+#      - '80:80'
+#      - '443:443'
+#    volumes:
+#      - './dev:/usr/share/nginx/html/'
+  webserver:
+    build: docker
+    image: node-express-dev:1.0
+    container_name: node-jsstudy
+    tty: true
     volumes:
-      - './dev:/usr/share/nginx/html/'
+      - './dev:/app'
+    ports:
+      - '8080:80'
